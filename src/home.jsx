@@ -3,9 +3,11 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import Resume from "./images/Ogozi Michael TCV.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
+import project1 from "./images/project1.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
 import { useState } from "react";
+import { GitHubIcon } from "@mui/icons-material";
 
 function Home() {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -197,10 +199,29 @@ function Home() {
           height="70"
         />
       </div>
-      <h2 className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 ">
+      <h2 className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase mb-10">
         Projects
       </h2>
-      <div className="project h-28 bg-white w-60 hover: flex-shrink-0"></div>
+      <div className="project   h-[650px] w-[500px]  bg-white flex mx-auto justify-center rounded-md">
+        <div className=" md:h-fit">
+          <img
+            src={project1}
+            alt="background image"
+            className="  rounded-md h-[420px] w-auto mt-10"
+          />
+          <h3 className=" md:text-5xl  text-2xl font-semibold text-center mt-5 mb-10 ">
+            {" "}
+            Real Estate{" "}
+          </h3>
+          <div className=" justify-evenly flex ">
+            <button className="bn5">
+              {" "}
+              Github <GitHubIcon />
+            </button>
+            <button className="bn5"> Demo </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
