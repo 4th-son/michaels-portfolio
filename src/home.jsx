@@ -4,35 +4,71 @@ import Resume from "./images/Ogozi Michael TCV.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
+import link from "./images/link.png";
+import im2 from "./images/L.P.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
 import { useState } from "react";
-import { GitHubIcon } from "@mui/icons-material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function Home() {
   const [openDropdown, setOpenDropdown] = useState(false);
+
+  const redirectToGitHub = () => {
+    const githubUrl = "https://real-estate-project-three.vercel.app/";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
+  const directToGitHub = () => {
+    const githubUrl = "https://github.com/4th-son/Real_estate_project";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
+  const ToGitHub = () => {
+    const githubUrl = "https://github.com/4th-son/linkedin-clone-yt";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
+  const Towebsite = () => {
+    const githubUrl = "https://4th-son.github.io/linkedin-clone-yt/";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
+  const github = () => {
+    const githubUrl = "https://github.com/4th-son/Family-first";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
+  const site = () => {
+    const githubUrl = "https://4th-son.github.io/Family-first";
+    window.open(githubUrl, "_blank"); // Open the link in a new tab
+  };
   return (
-    <div className=" bg-bg2">
-      <div className=" hero-section bg-bg2 md:bg-bg4 h-[100vh] w-[100vw] bg-center bg-cover md:pt-10 md:px-10">
+    <div className=" bg-bg2  ">
+      <div className=" hero-section bg-bg2 md:bg-bg4 md:h-[100vh] bg-center bg-cover md:pt-10 md:px-10">
         <nav className=" flex items-center justify-between ">
-          <div className="logo text-2xl text-red-600 font-bold md:ml-32 ml-10 md:mt-0 mt-5">
+          <div
+            id="home"
+            className="logo text-2xl text-red-600 font-bold md:ml-32 ml-10 md:mt-0 mt-5"
+          >
             Portfolio
           </div>
           <ul className="hidden md:flex mr-32 ">
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600">
-              <a href="">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600 ">
-              <a href="">About Me</a>
+              <a href="#About me">About Me</a>
             </li>
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600 ">
-              <a href="">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600 ">
-              <a href=""> projects</a>
+              <a href="#projects"> projects</a>
             </li>
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600 ">
-              <a href="">Contact Me</a>
+              <a href="#contact me">Contact Me</a>
             </li>
           </ul>
           <div className=" md:hidden text-red-600 mt-5 mr-9">
@@ -54,6 +90,27 @@ function Home() {
             <h3 className="md:text-2xl md:font-semibold mt-4 font-sans font-medium">
               I`am a Front-End Developer
             </h3>
+            <div className="socials  flex md:justify-evenly  mt-5 items-center justify-center">
+              {" "}
+              <a href="https://www.linkedin.com/in/michael-ogozi/">
+                <FaLinkedin style={{ fontSize: "34px", marginRight: "10px" }} />
+              </a>{" "}
+              <a href="https://www.facebook.com/micheal.ogozi?mibextid=ZbWKwL">
+                <FaFacebookSquare
+                  style={{ fontSize: "34px", marginRight: "10px" }}
+                />
+              </a>{" "}
+              <a href="https://twitter.com/michaelogozi">
+                <FaTwitterSquare
+                  style={{ fontSize: "34px", marginRight: "10px" }}
+                />
+              </a>
+              <a href="https://instagram.com/4th__son?igshid=OGQ5ZDc2ODk2ZA==">
+                <FaSquareInstagram
+                  style={{ fontSize: "34px", marginRight: "10px" }}
+                />
+              </a>
+            </div>
 
             <a href={Resume} download="Ogozi Michael TCV.pdf">
               <button className="bn5 hidden md:inline-block mt-5  ">
@@ -73,13 +130,17 @@ function Home() {
           </div>
         </div>
       </div>
+      <section id="About me"></section>
       <div className=" flex md:flex-row mt-40 flex-col-reverse  md:justify-evenly items-center justify-center">
         <img
           className=" md:h-[400px] h-[350px]  rounded-md md:ml-16"
           src={about}
           alt=""
         />
-        <div className=" text-white md:text-start md:w-1/4 md:mr-16 mb-20 text-center  ">
+        <div
+          id="About me"
+          className=" text-white md:text-start md:w-1/4 md:mr-16 mb-20 text-center  "
+        >
           <h1 className=" md:text-5xl text-2xl mb-5 font-semibold">About Me</h1>
           <h3 className=" font-bold mb-5">
             Front-End Developer{" "}
@@ -94,7 +155,10 @@ function Home() {
           </p>
         </div>
       </div>
-      <h1 className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-48 ">
+      <h1
+        id="skills"
+        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-48 "
+      >
         {" "}
         Skills
       </h1>
@@ -199,28 +263,103 @@ function Home() {
           height="70"
         />
       </div>
-      <h2 className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase mb-10">
+      <h2
+        id="projects"
+        className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase mb-10"
+      >
         Projects
       </h2>
-      <div className="project   h-[650px] w-[500px]  bg-white flex mx-auto justify-center rounded-md">
-        <div className=" md:h-fit">
-          <img
-            src={project1}
-            alt="background image"
-            className="  rounded-md h-[420px] w-auto mt-10"
-          />
-          <h3 className=" md:text-5xl  text-2xl font-semibold text-center mt-5 mb-10 ">
-            {" "}
-            Real Estate{" "}
-          </h3>
-          <div className=" justify-evenly flex ">
-            <button className="bn5">
+      <div className="projects_container flex flex-col md:flex-row justify-evenly">
+        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+          <div className=" ">
+            <img
+              src={project1}
+              alt="background image"
+              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+            />
+            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
               {" "}
-              Github <GitHubIcon />
-            </button>
-            <button className="bn5"> Demo </button>
+              Real Estate{" "}
+            </h3>
+            <div className=" justify-evenly flex pb-5">
+              <button className="bn5" onClick={directToGitHub}>
+                {" "}
+                Github <GitHubIcon style={{ fontSize: "16px" }} />
+              </button>
+              <button className="bn5" onClick={redirectToGitHub}>
+                {" "}
+                Demo <LanguageIcon style={{ fontSize: "16px" }} />
+              </button>
+            </div>
           </div>
         </div>
+        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+          <div className=" ">
+            <img
+              src={link}
+              alt="background image"
+              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+            />
+            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
+              {" "}
+              Linkedin Clone{" "}
+            </h3>
+            <div className=" justify-evenly flex  pb-5">
+              <button className="bn5" onClick={ToGitHub}>
+                {" "}
+                Github <GitHubIcon style={{ fontSize: "16px" }} />
+              </button>
+              <button className="bn5" onClick={Towebsite}>
+                {" "}
+                Demo <LanguageIcon style={{ fontSize: "16px" }} />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+          <div className=" ">
+            <img
+              src={im2}
+              alt="background image"
+              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+            />
+            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
+              {" "}
+              Landing Page{" "}
+            </h3>
+            <div className=" justify-evenly flex pb-5 ">
+              <button className="bn5" onClick={github}>
+                {" "}
+                Github <GitHubIcon style={{ fontSize: "16px" }} />
+              </button>
+              <button className="bn5" onClick={site}>
+                {" "}
+                Demo <LanguageIcon style={{ fontSize: "16px" }} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2
+        id="contact me"
+        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase md:mb-10 "
+      >
+        {" "}
+        Contact me
+      </h2>
+
+      <div className=" justify-center items-center flex md:flex-row flex-col pb-10  ">
+        <button className="bn5 px-7 ">
+          <h2 className=" md:text-2xl text-violet-100 mr-5">
+            <a href="mailto:michealogozi@gmail">michealogozi@gmail.com</a>
+          </h2>
+        </button>{" "}
+        <button className=" bn5  ml-5 mt-3 md:mt-0">
+          <a href="https://wa.me/07031990790">
+            {" "}
+            <MdOutlineWhatsapp style={{ fontSize: "34px" }} />{" "}
+          </a>
+        </button>
       </div>
     </div>
   );
