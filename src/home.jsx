@@ -269,13 +269,13 @@ function Home() {
       >
         Projects
       </h2>
-      <div className="projects_container flex flex-col md:flex-row justify-evenly">
-        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+      <div className="projects_container flex flex-col md:flex-row justify-evenly mx-auto ">
+        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[350px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={project1}
               alt="background image"
-              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+              className="  rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-5"
             />
             <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
               {" "}
@@ -293,12 +293,12 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[350px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={link}
               alt="background image"
-              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+              className="  rounded-md md:h-auto h-[382px] md:w-[300px] w-[320px] mt-5"
             />
             <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
               {" "}
@@ -316,12 +316,12 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[350px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={im2}
               alt="background image"
-              className="  rounded-md md:h-auto h-[420px] md:w-[300px] w-[350px] mt-5"
+              className="  rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-5"
             />
             <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-5 mb-5 ">
               {" "}
