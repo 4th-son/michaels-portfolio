@@ -45,7 +45,7 @@ function Home() {
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   return (
-    <div className=" bg-bg2  ">
+    <div className=" bg-bg2 mx-auto  ">
       <div className=" hero-section bg-bg2 md:bg-bg4 md:h-[100vh] bg-center bg-cover md:pt-10 md:px-10">
         <nav className=" flex items-center justify-between ">
           <div
@@ -163,7 +163,7 @@ function Home() {
         Skills
       </h1>
 
-      <div className=" flex mx-auto justify-around items-center md:w-4/5 mt-10 flex-wrap gap-2">
+      <div className=" flex mx-auto justify-around items-center w-4/5 mt-10 flex-wrap gap-3 ">
         <img
           className=" px-1"
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
