@@ -265,12 +265,12 @@ function Home() {
       </div>
       <h2
         id="projects"
-        className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase mb-10"
+        className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 mb-14"
       >
         Projects
       </h2>
       <div className="projects_container flex flex-col md:flex-row justify-evenly">
-        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={project1}
@@ -293,7 +293,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={link}
@@ -316,7 +316,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="project transform transition-all hover:scale-110 h-fit  md:w-[350px] w-[400px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
+        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[380px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
           <div className=" ">
             <img
               src={im2}
@@ -342,7 +342,7 @@ function Home() {
       </div>
       <h2
         id="contact me"
-        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-28 uppercase md:mb-10 "
+        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-28  md:mb-10 "
       >
         {" "}
         Contact me
