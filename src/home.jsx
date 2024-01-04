@@ -1,6 +1,6 @@
 import "./App.css";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import Resume from "./images/Ogozi Michael TCV.pdf";
+import Resume from "./images/Ogozi Michaels CV.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
@@ -52,7 +52,7 @@ function Home() {
             id="home"
             className="logo text-2xl text-red-600 font-bold md:ml-32 ml-10 md:mt-0 mt-5"
           >
-            Portfolio
+            4th-Son
           </div>
           <ul className="hidden md:flex mr-32 ">
             <li className=" px-3 font-bold capitalize text-white hover:text-red-600">
