@@ -1,6 +1,6 @@
 import "./App.css";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import Resume from "./images/Ogozi Michaels CV.pdf";
+import Resume from "./images/MICHAEL OGOZI.Pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
@@ -112,7 +112,7 @@ function Home() {
               </a>
             </div>
 
-            <a href={Resume} download="Ogozi Michael TCV.pdf">
+            <a href={Resume} download="MICHAEL OGOZI CV ">
               <button className="bn5 hidden md:inline-block mt-5  ">
                 Download Resume <FileDownloadIcon />
               </button>
