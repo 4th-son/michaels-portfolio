@@ -1,6 +1,6 @@
 import "./App.css";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import Resume from "./images/MICHAEL OGOZI.Pdf";
+import Resume from "./images/MICHAEL OGOZI.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
