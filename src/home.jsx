@@ -5,7 +5,7 @@ import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
 import link from "./images/link.png";
-import im2 from "./images/L.P.png";
+import im2 from "./images/B.C.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
 import { useState } from "react";
@@ -41,7 +41,7 @@ function Home() {
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   const site = () => {
-    const githubUrl = "https://4th-son.github.io/Family-first";
+    const githubUrl = "https://booking-app-clone-nu.vercel.app/";
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   return (
@@ -325,7 +325,7 @@ function Home() {
             />
             <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-3 mb-3 ">
               {" "}
-              Landing Page{" "}
+              booking-clone{" "}
             </h3>
             <div className=" justify-evenly flex pb-3 ">
               <button className="bn5" onClick={github}>
