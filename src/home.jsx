@@ -355,7 +355,7 @@ function Home() {
           </h2>
         </button>{" "}
         <button className=" bn5  ml-5 mt-3 md:mt-0">
-          <a href="https://wa.me/08161412734">
+          <a href="https://wa.me/23408161412734">
             {" "}
             <MdOutlineWhatsapp style={{ fontSize: "34px" }} />{" "}
           </a>
