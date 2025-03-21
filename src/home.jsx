@@ -1,10 +1,10 @@
 import "./App.css";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import Resume from './images/MICHAEL OGOZI-CV.pdf';
+import Resume from "./images/MICHAEL OGOZI-CV.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
-import link from "./images/link.png";
+import link from "./images/lucky.png";
 import im2 from "./images/B.C.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
@@ -29,11 +29,11 @@ function Home() {
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   const ToGitHub = () => {
-    const githubUrl = "https://github.com/4th-son/linkedin-clone-yt";
+    const githubUrl = "https://github.com/4th-son/school-website";
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   const Towebsite = () => {
-    const githubUrl = "https://4th-son.github.io/linkedin-clone-yt/";
+    const githubUrl = "https://Luckytrinityjuniorschool.com";
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
   const github = () => {
@@ -293,24 +293,21 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="project transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[340px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
-          <div className=" ">
+        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit md:w-[350px] w-[340px] bg-white flex mx-auto justify-center rounded-2xl pb-5 mb-4">
+          <div>
             <img
               src={link}
               alt="background image"
-              className="  rounded-md md:h-auto h-[382px] md:w-[300px] w-[320px] mt-3"
+              className="rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-3 mx-auto"
             />
-            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-3 mb-3 ">
-              {" "}
-              Linkedin Clone{" "}
+            <h3 className="md:text-4xl text-2xl font-bold text-center mt-3 mb-3">
+              Lucky Trinity School
             </h3>
-            <div className=" justify-evenly flex  pb-3">
+            <div className="justify-evenly flex pb-3">
               <button className="bn5" onClick={ToGitHub}>
-                {" "}
                 Github <GitHubIcon style={{ fontSize: "16px" }} />
               </button>
               <button className="bn5" onClick={Towebsite}>
-                {" "}
                 Demo <LanguageIcon style={{ fontSize: "16px" }} />
               </button>
             </div>
@@ -355,7 +352,7 @@ function Home() {
           </h2>
         </button>{" "}
         <button className=" bn5  ml-5 mt-3 md:mt-0">
-          <a href="https://wa.me/23408161412734">
+          <a href="https://wa.me/254792272017">
             {" "}
             <MdOutlineWhatsapp style={{ fontSize: "34px" }} />{" "}
           </a>
