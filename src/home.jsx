@@ -88,7 +88,7 @@ function Home() {
               Michael Ogozi
             </h1>
             <h3 className="md:text-2xl md:font-semibold mt-4 font-sans font-medium">
-              I`am a Front-End Developer
+              I`am a Full-Stack Developer
             </h3>
             <div className="socials  flex md:justify-evenly  mt-5 items-center justify-center">
               {" "}
@@ -143,15 +143,16 @@ function Home() {
         >
           <h1 className=" md:text-5xl text-2xl mb-5 font-semibold">About Me</h1>
           <h3 className=" font-bold mb-5">
-            Front-End Developer{" "}
+            Full-Stack Developer{" "}
             <span className="text-red-500"> & Designer</span>
           </h3>
           <p className=" px-5 md:px-0 ">
             {" "}
-            I`m passionate about creating beautiful and user-friendly web
-            experiences. With a strong foundation in both design principles and
-            coding, I strive to bridge the gap between aesthetics and
-            functionality.
+            I'm a passionate Full Stack Developer dedicated to building
+            beautiful, user-friendly, and high-performing web experiences. With
+            a strong foundation in both front-end design principles and back-end
+            development, I bridge the gap between aesthetics and functionality
+            to deliver complete, seamless digital solutions.
           </p>
         </div>
       </div>
@@ -166,7 +167,7 @@ function Home() {
       <div className=" flex mx-auto justify-around items-center w-4/5 mt-10 flex-wrap gap-3 ">
         <img
           className=" px-1"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+          src="data:image/png;base64,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"
           alt="bootstrap"
           width="60"
           height="60"
@@ -259,6 +260,13 @@ function Home() {
           className=" px-1"
           src="https://static.vecteezy.com/system/resources/previews/016/833/880/non_2x/github-logo-git-hub-icon-with-text-on-white-background-free-vector.jpg"
           alt="Github"
+          width="70"
+          height="70"
+        />
+        <img
+          className=" px-1"
+          src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png"
+          alt="express"
           width="70"
           height="70"
         />
