@@ -6,7 +6,7 @@ import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
 import link from "./images/lucky.png";
 import im2 from "./images/B.C.png";
-import idimg from "./images/idimg.png";
+import idimg from "./images/Idimg.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
 import { useState } from "react";
