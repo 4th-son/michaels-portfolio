@@ -1,145 +1,116 @@
-.bn5 {
-  padding: 0.6em 2em;
-  border: none;
-  outline: none;
-  color: rgb(125, 146, 92);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
+.btn {
+  /* Solid button interior; rainbow effect will live in the blurred shadow pseudo-element. */
+  --btn-bg: #0f172a;
+  --btn-ink: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-weight: 600;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Lightweight rainbow animation (animates background-position) */
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    animation: none;
+    background-size: auto;
+  }
+  .btn.glow:before {
+    animation: none;
+    filter: blur(6px);
+  }
+}
+
+/* Subtle glowing outline on hover for larger screens, turned off on small devices to save paint */
+.btn.glow:before {
+  /* The rainbow lives only in the shadow pseudo-element. This creates a blurred, animated glow behind the button. */
+  content: "";
+  position: absolute;
+  /* sit slightly outside the button so it reads like a shadow */
+  inset: -6px;
+  z-index: -1;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #ff7a7a,
+    #ffd26a,
+    #9effc8,
+    #98b6ff,
+    #d590ff
+  );
+  background-size: 300% 100%;
+  filter: blur(10px);
+  opacity: 0.8;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  animation: rainbow 6s linear infinite;
+}
+.btn.glow:hover:before {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Mobile: disable heavy blur/animation to improve render speed */
+@media (max-width: 768px) {
+  .btn.glow:before {
+    display: none;
+  }
+  .btn {
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+  }
+}
+
+.bn54 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #000;
   font-weight: 600;
 }
 
-.bn5:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowingbn5 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-@keyframes glowingbn5 {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.bn5:active {
-  color: #000;
-}
-
-.bn5:active:after {
-  background: transparent;
-}
-
-.bn5:hover:before {
-  opacity: 1;
-}
-
-.bn5:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #191919;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-.bn54 {
-  position: relative;
-  outline: none;
-  text-decoration: none;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  height: 45px;
-  width: 130px;
-  opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-}
-
 .bn54 .bn54span {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.7px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
 }
 
-.bn54:hover {
-  animation: bn54rotate 0.7s ease-in-out both;
-}
-
-.bn54:hover .bn54span {
-  animation: bn54storm 0.7s ease-in-out both;
-  animation-delay: 0.06s;
-}
-
-@keyframes bn54rotate {
-  0% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+/* Slide-down entrance for small overlays */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
   }
-  25% {
-    transform: rotate(3deg) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: rotate(-3deg) translate3d(0, 0, 0);
-  }
-  75% {
-    transform: rotate(1deg) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: rotate(0deg) translate3d(0, 0, 0);
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
-
-@keyframes bn54storm {
-  0% {
-    transform: translate3d(0, 0, 0) translateZ(0);
-  }
-  25% {
-    transform: translate3d(4px, 0, 0) translateZ(0);
-  }
-  50% {
-    transform: translate3d(-3px, 0, 0) translateZ(0);
-  }
-  75% {
-    transform: translate3d(2px, 0, 0) translateZ(0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) translateZ(0);
-  }
+.slide-down {
+  animation: slideDown 180ms ease-out forwards;
 }

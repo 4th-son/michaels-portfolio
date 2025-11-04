@@ -1,11 +1,12 @@
 import "./App.css";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import Resume from "./images/MICHAEL OGOZI-CV.pdf";
+import Resume from "./images/Michael_Ogozi_CV.pdf";
 import bg1 from "./images/bg1.png";
 import about from "./images/aboutt.png";
 import project1 from "./images/project1.png";
 import link from "./images/lucky.png";
 import im2 from "./images/B.C.png";
+import idimg from "./images/idimg.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import DropDownMenu from "./dropDownMenu";
 import { useState } from "react";
@@ -44,10 +45,18 @@ function Home() {
     const githubUrl = "https://booking-app-clone-nu.vercel.app/";
     window.open(githubUrl, "_blank"); // Open the link in a new tab
   };
+  const newProjectGithub = () => {
+    const githubUrl = "https://github.com/4th-son/Digital_ID";
+    window.open(githubUrl, "_blank");
+  };
+  const newProjectDemo = () => {
+    const demoUrl = "https://digital-id-phi.vercel.app/";
+    window.open(demoUrl, "_blank");
+  };
   return (
-    <div className=" bg-bg2 mx-auto  ">
+    <div className=" bg-bg2 mx-auto min-h-screen antialiased">
       <div className=" hero-section bg-bg2 md:bg-bg4 md:h-[100vh] bg-center bg-cover md:pt-10 md:px-10">
-        <nav className=" flex items-center justify-between ">
+        <nav className="relative flex items-center justify-between ">
           <div
             id="home"
             className="logo text-2xl text-red-600 font-bold md:ml-32 ml-10 md:mt-0 mt-5"
@@ -72,22 +81,28 @@ function Home() {
             </li>
           </ul>
           <div className=" md:hidden text-red-600 mt-5 mr-9">
-            <button onClick={() => setOpenDropdown((prev) => !prev)}>
+            <button
+              aria-expanded={openDropdown}
+              aria-controls="mobile-menu"
+              onClick={() => setOpenDropdown((prev) => !prev)}
+            >
               <MenuIcon />
             </button>
-            {openDropdown && <DropDownMenu />}
+            {openDropdown && (
+              <DropDownMenu onClose={() => setOpenDropdown(false)} />
+            )}
           </div>
         </nav>
 
         <div className="">
           <div className="intro text-white md:text-zinc-400 md:absolute top-60 left-40 text-center">
-            <h4 className=" md:mt-0 mt-9 md:text-xl  md:mb-4 font-serif md:font-sans">
+            <h4 className="md:mt-0 mt-9 md:text-lg text-base md:mb-4 font-heading">
               HELLO, my name is
             </h4>
-            <h1 className=" md:font-semibold md:text-6xl text-2xl font-medium">
+            <h1 className="md:font-semibold md:text-4xl text-xl font-heading font-semibold">
               Michael Ogozi
             </h1>
-            <h3 className="md:text-2xl md:font-semibold mt-4 font-sans font-medium">
+            <h3 className="md:text-xl md:font-semibold mt-4 font-heading font-medium">
               I`am a Full-Stack Developer
             </h3>
             <div className="socials  flex md:justify-evenly  mt-5 items-center justify-center">
@@ -113,41 +128,47 @@ function Home() {
             </div>
 
             <a href={Resume} download="MICHAEL OGOZI-CV ">
-              <button className="bn5 hidden md:inline-block mt-5  ">
+              <button className="btn glow hidden md:inline-block mt-5">
                 Download Resume <FileDownloadIcon />
               </button>
-              <button className=" text-gray-30 bg-transparent  border-2 md:hidden border-red-300 cursor-pointer px-4 py-2 mt-3 rounded-md">
+              <button className="btn md:hidden bg-transparent border-2 border-red-300 text-red-300 px-4 py-2 mt-3 rounded-md">
                 Download Resume <FileDownloadIcon />
               </button>
             </a>
           </div>
           <div className="image-container flex items-center justify-center">
             <img
-              className=" md:hidden h-[350px] w-[350px] rounded-full items-center justify-center"
+              className=" md:hidden h-[350px] w-[350px] rounded-full items-center justify-center mx-auto"
               src={bg1}
-              alt=""
+              alt="Michael portrait"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
       </div>
+
       <section id="About me"></section>
-      <div className=" flex md:flex-row mt-40 flex-col-reverse  md:justify-evenly items-center justify-center">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center mt-20 md:mt-32 space-y-10 md:space-y-0 md:space-x-10">
         <img
-          className=" md:h-[400px] h-[350px]  rounded-md md:ml-16"
+          className="md:h-[350px] h-[300px] rounded-md"
           src={about}
-          alt=""
+          alt="About illustration"
+          loading="lazy"
+          decoding="async"
         />
         <div
           id="About me"
-          className=" text-white md:text-start md:w-1/4 md:mr-16 mb-20 text-center  "
+          className="text-white text-center md:text-left max-w-md"
         >
-          <h1 className=" md:text-5xl text-2xl mb-5 font-semibold">About Me</h1>
-          <h3 className=" font-bold mb-5">
+          <h1 className="md:text-3xl text-2xl mb-4 font-heading font-semibold">
+            About Me
+          </h1>
+          <h3 className="font-bold mb-4">
             Full-Stack Developer{" "}
-            <span className="text-red-500"> & Designer</span>
+            <span className="text-red-500">& Designer</span>
           </h3>
-          <p className=" px-5 md:px-0 ">
-            {" "}
+          <p className="w-72 mx-auto md:mx-0">
             I'm a passionate Full Stack Developer dedicated to building
             beautiful, user-friendly, and high-performing web experiences. With
             a strong foundation in both front-end design principles and back-end
@@ -156,11 +177,11 @@ function Home() {
           </p>
         </div>
       </div>
+
       <h1
         id="skills"
-        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-48 "
+        className="text-white md:text-3xl text-xl font-heading font-semibold text-center mt-48"
       >
-        {" "}
         Skills
       </h1>
 
@@ -171,6 +192,8 @@ function Home() {
           alt="bootstrap"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -178,6 +201,8 @@ function Home() {
           alt="css3"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -185,6 +210,8 @@ function Home() {
           alt="figma"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -192,6 +219,8 @@ function Home() {
           alt="firebase"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -199,6 +228,8 @@ function Home() {
           alt="html5"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -206,6 +237,8 @@ function Home() {
           alt="javascript"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -213,6 +246,8 @@ function Home() {
           alt="postgresql"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />{" "}
         <img
           className=" px-1"
@@ -220,6 +255,8 @@ function Home() {
           alt="react"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -227,6 +264,8 @@ function Home() {
           alt="tailwind"
           width="60"
           height="60"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -234,6 +273,8 @@ function Home() {
           alt="Redux"
           width="70"
           height="70"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -241,6 +282,8 @@ function Home() {
           alt="Typescript"
           width="70"
           height="70"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -255,6 +298,8 @@ function Home() {
           alt="Next.js"
           width="70"
           height="70"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -262,6 +307,8 @@ function Home() {
           alt="Github"
           width="70"
           height="70"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className=" px-1"
@@ -269,97 +316,84 @@ function Home() {
           alt="express"
           width="70"
           height="70"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <h2
         id="projects"
-        className="  text-white md:text-5xl  text-2xl font-semibold text-center mt-28 mb-14"
+        className="text-white md:text-3xl text-xl font-heading font-semibold text-center mt-28 mb-14"
       >
         Projects
       </h2>
-      <div className="projects_container flex flex-col md:flex-row justify-evenly mx-auto ">
-        <div className="project  transform transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[340px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
-          <div className=" ">
+      <div className="projects_container flex flex-wrap justify-center gap-8 mt-16">
+        {/* Project Card Template */}
+        {[
+          {
+            img: idimg,
+            title: "Digital ID-Card Generator",
+            github: newProjectGithub,
+            demo: newProjectDemo,
+          },
+          {
+            img: project1,
+            title: "Real Estate",
+            github: directToGitHub,
+            demo: redirectToGitHub,
+          },
+          {
+            img: link,
+            title: "Lucky Trinity School",
+            github: ToGitHub,
+            demo: Towebsite,
+          },
+          {
+            img: im2,
+            title: "Booking Clone",
+            github: github,
+            demo: site,
+          },
+        ].map((project, index) => (
+          <div
+            key={index}
+            className="project bg-white rounded-2xl shadow-md transform transition-all hover:scale-105 flex flex-col items-center w-[90%] sm:w-[320px] md:w-[350px] h-[400px]"
+          >
             <img
-              src={project1}
-              alt="background image"
-              className="  rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-3"
+              src={project.img}
+              alt={project.title}
+              className="rounded-md h-[250px] w-[90%] object-cover mt-4"
+              loading="lazy"
+              decoding="async"
             />
-            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-3 mb-3 ">
-              {" "}
-              Real Estate{" "}
+            <h3 className="text-2xl text-black font-bold text-center mt-5 mb-4">
+              {project.title}
             </h3>
-            <div className=" justify-evenly flex pb-3">
-              <button className="bn5" onClick={directToGitHub}>
-                {" "}
+            <div className="flex justify-evenly w-full mt-auto mb-6">
+              <button className="btn glow" onClick={project.github}>
                 Github <GitHubIcon style={{ fontSize: "16px" }} />
               </button>
-              <button className="bn5" onClick={redirectToGitHub}>
-                {" "}
+              <button className="btn glow" onClick={project.demo}>
                 Demo <LanguageIcon style={{ fontSize: "16px" }} />
               </button>
             </div>
           </div>
-        </div>
-        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit md:w-[350px] w-[340px] bg-white flex mx-auto justify-center rounded-2xl pb-5 mb-4">
-          <div>
-            <img
-              src={link}
-              alt="background image"
-              className="rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-3 mx-auto"
-            />
-            <h3 className="md:text-4xl text-2xl font-bold text-center mt-3 mb-3">
-              Lucky Trinity School
-            </h3>
-            <div className="justify-evenly flex pb-3">
-              <button className="bn5" onClick={ToGitHub}>
-                Github <GitHubIcon style={{ fontSize: "16px" }} />
-              </button>
-              <button className="bn5" onClick={Towebsite}>
-                Demo <LanguageIcon style={{ fontSize: "16px" }} />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="project md:transform md:transition-all md:hover:scale-110 h-fit  md:w-[350px] w-[340px] bg-white flex  mx-auto justify-center rounded-2xl pb-5 mb-4">
-          <div className=" ">
-            <img
-              src={im2}
-              alt="background image"
-              className="  rounded-md md:h-auto h-[380px] md:w-[300px] w-[320px] mt-3"
-            />
-            <h3 className=" md:text-4xl  text-2xl font-bold text-center mt-3 mb-3 ">
-              {" "}
-              booking-clone{" "}
-            </h3>
-            <div className=" justify-evenly flex pb-3 ">
-              <button className="bn5" onClick={github}>
-                {" "}
-                Github <GitHubIcon style={{ fontSize: "16px" }} />
-              </button>
-              <button className="bn5" onClick={site}>
-                {" "}
-                Demo <LanguageIcon style={{ fontSize: "16px" }} />
-              </button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
+
       <h2
         id="contact me"
-        className=" text-white md:text-5xl  text-2xl font-semibold text-center mt-28  md:mb-10 "
+        className="text-white md:text-3xl text-xl font-heading font-semibold text-center mt-28 md:mb-10"
       >
-        {" "}
         Contact me
       </h2>
 
       <div className=" justify-center items-center flex md:flex-row flex-col pb-10  ">
-        <button className="bn5 px-7 ">
+        <button className="btn glow px-7 ">
           <h2 className=" md:text-2xl text-violet-100 mr-5">
             <a href="mailto:michealogozi@gmail">michealogozi@gmail.com</a>
           </h2>
         </button>{" "}
-        <button className=" bn5  ml-5 mt-3 md:mt-0">
+        <button className=" btn glow ml-5 mt-3 md:mt-0">
           <a href="https://wa.me/254792272017">
             {" "}
             <MdOutlineWhatsapp style={{ fontSize: "34px" }} />{" "}

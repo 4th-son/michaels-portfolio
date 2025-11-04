@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Project base styles: set default fonts, accessible colors and responsive image handling */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-neutral-900 text-white antialiased font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: theme("fontFamily.serif");
+    color: #ffffff;
+  }
+  a {
+    @apply text-red-400 hover:text-red-500 underline-offset-2;
+  }
+  p {
+    @apply text-gray-300;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Small helper utilities for accessibility */
+@layer utilities {
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+}
